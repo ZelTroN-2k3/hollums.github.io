@@ -1,0 +1,20 @@
+PAC-MAN: GLOVES ARE OFF!!!
+
+Inspired by "Geometry Wars," this is a shooting game with an Asteroids gameplay style, 
+but with a little twist! We all know the classic arcade game "Pac-Man," but in this version,
+our hero has grown tired of running from those pesky ghosts.
+
+The time is nigh for action, and Pac-Man is packing.
+
+Fend off the oncoming waves of ghosts with the pellets Pac-Man has coveted his whole life,
+saving up for this moment. When you're in a bind, use special abilities to wipe out multiple 
+enemies, or to dodge the spooky ghosts.
+
+Like any classic arcade game, this is a game about getting a high score.  In each round,
+Pac-Man's level scales with the score.  With each new level, Pac-Man's abilities grow
+stronger and become more readily available to use.  Unfortunately, the difficulty of the
+round also increases with the score, so it's no easy task to reach the highest level. 
+
+Dive in and see how many ghosts you can fend off!
+
+** Game is still in a "beta" phase, so it's not entirely balanced yet. **

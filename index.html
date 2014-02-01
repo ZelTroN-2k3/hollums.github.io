@@ -6,13 +6,15 @@
 			canvas {border-width:3px;border-style:solid;border-color:yellow;background:black;margin:0 auto;display:block}
 			h1 {border-width:3px;border-style:solid;border-color:yellow;background:black;display:block;text-align:center}
 			body {background-color:#282828  }
-			.wrapper{text-align:center;padding:5px;}
+			.wrapper{text-align:center;padding:5px;color:white}
 		</style>
-		
 		<script type="text/javascript">
 		
+		var HIGH_SCORE_STRING="null";
+		var checkedScore=false;
 		// piercing rounds
 		// chain rounds
+		// charge up shots - hold space and release
 		var menEn = new Array();
 		
 		var ctx;
@@ -353,6 +355,7 @@
 						else
 						{
 							// DONE
+							this.activated=false;
 						}
 					}
 				}
@@ -811,6 +814,10 @@
 		
 		function reset()
 		{
+			upDown=false;
+			leftDown=false;
+			rightDown=false;
+			downDown=false;
 			ms=0;
 			time=0;
 			player.dead=false;
@@ -836,7 +843,7 @@
 			bullets=[];
 			enemyResidues=[];
 			player.currentSpell="null";
-			
+			checkedScore=false;
 			init();
 		}
 		
@@ -865,12 +872,12 @@
 			window.addEventListener('keyup',onKeyUp,true);
 			canvas.addEventListener('mousedown',getMousePosition,false);
 			canvas.addEventListener('mousemove',getMouseMovePosition,false);
+			// document.addEventListener("deviceready",onDeviceReady,false);
 			
 			thisInterval = setInterval(draw,interval);
 			
 			player.x = WIDTH/2;
 			player.y = HEIGHT/2;
-
 			updateScore();
 		}
 		
@@ -1229,7 +1236,6 @@
 		
 		function gameOver()
 		{
-			checkHighScore();
 			clearInterval(thisInterval);
 			food=[];
 			ctx.fillStyle="black";
@@ -1242,16 +1248,159 @@
 			ctx.fillText("GAME OVER",WIDTH/2-125,HEIGHT/2);
 			ctx.font="20px Arial";
 			ctx.fillText("Press Enter to Play Again",WIDTH/2-115,HEIGHT/2+50);
+			if(!checkedScore)
+			{
+				checkHighScore();
+			}
 		}
 		
 		function checkHighScore()
 		{
+			isHighScore=false;
+			// parse lines into array
+			rawHighScores = readTextFile("HIGH_SCORES.txt");
+			rawHighScoresArray = new Array();
+			rawHighScoresArray = rawHighScores.split("\n");
+			rawHighScoresArray.splice(0,1);
+			scores = new Array();
+			temp1 = "null";
+			temp2 = "null";
+			newHighScoreEntry = "null";
 			
+			for(var i=0;i<rawHighScoresArray.length;i++)
+			{
+				if(rawHighScoresArray[i].length>20)
+				{
+					thisScore=rawHighScoresArray[i].substring(20,rawHighScoresArray[i].length);
+					scores.push(thisScore);
+				}
+			}
+			for(var i=0;i<scores.length;i++)
+			{
+				// find which score was beaten && and put in its place, move previous score down
+				if(!isHighScore)
+				{
+					if(score >= scores[i])
+					{
+						isHighScore=true;
+						// replace the old score if it's last place
+						name = getUserName();
+						newHighScoreEntry = (i+1)+". "+name+" "+score;
+						if(i==scores.length-1)
+						{
+							rawHighScoresArray[i]=newHighScoreEntry;
+						}
+						// else store the old score and move all scores down
+						else
+						{
+							temp1=(i+2)+". "+rawHighScoresArray[i].substring(3,rawHighScoresArray[i].length);
+							rawHighScoresArray[i]=newHighScoreEntry;	
+						}	
+					}
+				}
+				else // if it was found to be a high score, sort rest of list
+				{
+					temp2=(i+2)+". "+rawHighScoresArray[i].substring(3,rawHighScoresArray[i].length);
+					rawHighScoresArray[i]=temp1;
+					temp1=temp2;
+				}
+			}// end of scores loop
+			// drop the last place
+			// regroup array and write to file
+			rawHighScoresArray.unshift("HIGH SCORES: \n");
+			rawHighScoresArray.unshift("!!TODO: UPDATE HIGH SCORES TO !!\n");
+			HIGH_SCORE_STRING="";
+			for(var i=0;i<rawHighScoresArray.length;i++)
+			{
+				HIGH_SCORE_STRING+=rawHighScoresArray[i]+"\n";
+			}
+			if(isHighScore)
+				alert(HIGH_SCORE_STRING);
+			checkedScore=true;
+			//window.requestFileSystem = window.requestFileSystem || window.webkitRequestFileSystem;
+			//window.requestFileSystem(window.PERSISTENT,5*1024,onInitFs(),errorHandler());
+		}
+		/*
+		function errorHandler()
+		{
+			alert("error");
+		}
+		
+		function onInitFs(fs)
+		{
+		 	alert("hi");
+ 			fs.root.getFile('HIGH_SCORES.txt', {create: true}, function(fileEntry) 
+ 			{
+				 // Create a FileWriter object for our FileEntry (log.txt).
+    			fileEntry.createWriter(function(fileWriter) 
+    			{
+   		   			fileWriter.onwriteend = function(e) 
+   		   			{
+        				console.log('Write completed.');
+      				};
+					fileWriter.onerror = function(e) 
+					{
+        				console.log('Write failed: ' + e.toString());
+      				};
+      				// Create a new Blob and write it to log.txt.
+      				var blob = new Blob(['Lorem Ipsum'], {type: 'text/plain'});
+	      			fileWriter.write(blob);
+	      		}, errorHandler());
+			}, errorHandler());
+		}
+		*/
+		
+		function readTextFile(file)
+		{
+			// http://stackoverflow.com/questions/14446447/javascript-read-local-text-file
+			var rawFile = new XMLHttpRequest();
+			var allText;
+			rawFile.open("GET",file,false);
+			rawFile.onreadystatechange = function()
+			{
+				if(rawFile.readyState===4)
+				{
+					if(rawFile.status === 200 || rawFile.status==0)
+					{
+						allText = rawFile.responseText;
+					}
+				}
+			}
+			rawFile.send(null);
+			return allText;
+		}
+		
+		function displayControls()
+		{
+			alert(readTextFile("CONTROLS.txt"));
 		}
 		
 		function printHighScores()
 		{
-			alert("coming soon");
+			alert(readTextFile("HIGH_SCORES.txt"));
+		}
+		
+		function printAbout()
+		{
+			alert(readTextFile("ABOUT.txt"));
+		}
+		
+		function getUserName()
+		{
+			var name = prompt("New High Score!\n\nPlease enter your name: ","Bob Loblaw");
+			if(name.length>16)
+			{
+				name=name.substring(0,15);
+			}
+			else if(name.length<16)
+			{
+				toAdd=16-name.length;
+				for(var i=0;i<toAdd;i++)
+				{
+					name=name+" ";
+				}
+			}
+			return name;
 		}
 		
 		function playerLevelUp()
@@ -1304,7 +1453,10 @@
 			//ctx.strokeStyle="grey";
 			if(!nova.onCooldown)
 			{
-				ctx.fillStyle="green";
+				if(player.currentSpell=="nova")
+					ctx.fillStyle="blue";
+				else
+					ctx.fillStyle="green";
 				ctx.beginPath();
 				ctx.rect((WIDTH/2)-size-margins,HEIGHT-size-margins,size,size);
 				ctx.closePath();
@@ -1328,7 +1480,10 @@
 			}
 			if(!bomb.onCooldown)
 			{
-				ctx.fillStyle="green";
+				if(player.currentSpell=="bomb")
+					ctx.fillStyle="blue";
+				else
+					ctx.fillStyle="green";
 				ctx.beginPath();
 				ctx.rect((WIDTH/2),HEIGHT-size-margins,size,size);
 				ctx.closePath();
@@ -1352,7 +1507,10 @@
 			}
 			if(!blink.onCooldown)
 			{
-				ctx.fillStyle="green";
+				if(player.currentSpell=="blink")
+					ctx.fillStyle="blue";
+				else
+					ctx.fillStyle="green";
 				ctx.beginPath();
 				ctx.rect((WIDTH/2+size+margins),HEIGHT-size-margins,size,size);
 				ctx.closePath();
@@ -1408,6 +1566,18 @@
 					nova.timeActivated = time;
 					nova.cooldownCount = nova.cooldown;
 				}
+				else if(evt.keyCode==32 && player.currentSpell=="nova" && !nova.onCooldown && !nova.inProgress)
+				{
+					spaceDown = true;
+					nova.visible=true;
+					nova.inProgress = true;
+					nova.x = player.x;
+					nova.y = player.y;
+					nova.onCooldown = true;
+					nova.timeActivated = time;
+					nova.cooldownCount = nova.cooldown;
+					player.currentSpell="null";
+				}
 				else if(evt.keyCode==32 && !nova.inProgress && !player.shooting && !evt.shiftKey)
 				{
 
@@ -1422,6 +1592,10 @@
 				if(evt.keyCode==84 && !bomb.onCooldown)
 				{
 					player.currentSpell="bomb";
+				}
+				if(evt.keyCode==78 && !nova.onCooldown)
+				{
+					player.currentSpell="nova";
 				}
 			}
 			if((evt.keyCode==13 && player.dead) || (evt.keyCode==13 && inMenu))
@@ -1499,6 +1673,7 @@
 				mouse.moveY=evt.clientY+document.body.scrollTop+document.documentElement.scrollTop-canvas.offsetTop;
 			}
 		}
+			
 		function drawMenu()
 		{
 			ms++;
@@ -1532,15 +1707,7 @@
 			ctx.beginPath
 			
 		}
-		function displayControls()
-		{
-			alert("CONTROLS:\n"+
-					"A,S,D,W - Left, Back, Right, Forward\n"+
-					"Space - Shoot in direction of mouse position\n"+
-					"Shift+Space - Activate Nova spell\n"+
-					"T + Click - Activate Timed Bomb at clicked area\n"+
-					"B + Click - Activate Teleport to clicked area");
-		}
+
 		</script>
 		
 	</head>
@@ -1565,6 +1732,8 @@
 		<div class="wrapper">
 		<button type="button" onclick="displayControls()">Controls</button>
 		<button type="button" onclick="printHighScores()">High Scores</button>
+		<button type="button" onclick="printAbout()">About</button>
+		<text> Game optimized for Safari Browser with HTML5</text>
 		</div>
 		<!--
 		<div id="spawnTimer">Spawn Timer = </div>

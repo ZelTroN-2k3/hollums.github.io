@@ -1,0 +1,6 @@
+HIGH SCORES: (NOT YET FUNCTIONING)
+1. Bob              500
+2. Alice            400
+3. Eve              300
+4. Nelson           200
+5. Victor           100
