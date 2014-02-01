@@ -6,6 +6,7 @@
 			canvas {border-width:3px;border-style:solid;border-color:yellow;background:black;margin:0 auto;display:block}
 			h1 {border-width:3px;border-style:solid;border-color:yellow;background:black;display:block;text-align:center}
 			body {background-color:#282828  }
+			.wrapper{text-align:center;padding:5px;}
 		</style>
 		
 		<script type="text/javascript">
@@ -545,7 +546,7 @@
 			}
 			else if(choice==4)
 			{
-				this.color="blue";
+				this.color="teal";
 				this.chaseImage=blue_ghost;
 			}
 			else
@@ -894,7 +895,7 @@
 		function updateScore()
 		{
 			score++;
-			//score+=5
+			//score+=2;
 			scoreAdjusted = true;
 			foodChance-=2;
 		}
@@ -1519,6 +1520,15 @@
 			ctx.beginPath
 			
 		}
+		function displayControls()
+		{
+			alert("CONTROLS:\n"+
+					"A,S,D,W - Left, Back, Right, Forward\n"+
+					"Space - Shoot in direction of mouse position\n"+
+					"Shift+Space - Activate Nova spell\n"+
+					"T + Click - Activate Timed Bomb at clicked area\n"+
+					"B + Click - Activate Teleport to clicked area");
+		}
 		</script>
 		
 	</head>
@@ -1540,6 +1550,9 @@
 			<button type="button" onclick="reset()">restart</button>
 		</br>
 		-->
+		<div class="wrapper">
+		<button type="button" onclick="displayControls()">Controls</button>
+		</div>
 		<!--
 		<div id="spawnTimer">Spawn Timer = </div>
 		<div id="foodChance">Food Chance= </div>
