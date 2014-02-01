@@ -1229,6 +1229,7 @@
 		
 		function gameOver()
 		{
+			checkHighScore();
 			clearInterval(thisInterval);
 			food=[];
 			ctx.fillStyle="black";
@@ -1241,6 +1242,16 @@
 			ctx.fillText("GAME OVER",WIDTH/2-125,HEIGHT/2);
 			ctx.font="20px Arial";
 			ctx.fillText("Press Enter to Play Again",WIDTH/2-115,HEIGHT/2+50);
+		}
+		
+		function checkHighScore()
+		{
+			
+		}
+		
+		function printHighScores()
+		{
+			alert("coming soon");
 		}
 		
 		function playerLevelUp()
@@ -1368,49 +1379,52 @@
 		// EVENT LISTENERS
 		function onKeyDown(evt)
 		{
-			if(evt.keyCode==38 || evt.keyCode==87)
+			if(!inMenu)
 			{
-				upDown = true;	
-			}
-			else if(evt.keyCode==40 || evt.keyCode==83)
-			{
-				downDown = true;
-			}
-			else if(evt.keyCode==37 || evt.keyCode==65)
-			{
-				leftDown = true;
-			}
-			else if(evt.keyCode==39 || evt.keyCode==68)
-			{
-				rightDown = true;
-			}
-			else if(evt.keyCode==32 && evt.shiftKey && !nova.onCooldown && !nova.inProgress)
-			{
-				spaceDown = true;
-				nova.visible=true;
-				nova.inProgress = true;
-				nova.x = player.x;
-				nova.y = player.y;
-				nova.onCooldown = true;
-				nova.timeActivated = time;
-				nova.cooldownCount = nova.cooldown;
-			}
-			else if(evt.keyCode==32 && !nova.inProgress && !player.shooting && !evt.shiftKey)
-			{
+				if(evt.keyCode==38 || evt.keyCode==87)
+				{
+					upDown = true;	
+				}
+				else if(evt.keyCode==40 || evt.keyCode==83)
+				{
+					downDown = true;
+				}
+				else if(evt.keyCode==37 || evt.keyCode==65)
+				{
+					leftDown = true;
+				}
+				else if(evt.keyCode==39 || evt.keyCode==68)
+				{
+					rightDown = true;
+				}
+				else if(evt.keyCode==32 && evt.shiftKey && !nova.onCooldown && !nova.inProgress)
+				{
+					spaceDown = true;
+					nova.visible=true;
+					nova.inProgress = true;
+					nova.x = player.x;
+					nova.y = player.y;
+					nova.onCooldown = true;
+					nova.timeActivated = time;
+					nova.cooldownCount = nova.cooldown;
+				}
+				else if(evt.keyCode==32 && !nova.inProgress && !player.shooting && !evt.shiftKey)
+				{
 
-				thisBullet = new Bullet(player.x,player.y,mouse.moveX,mouse.moveY);
-				bullets.push(thisBullet);
-				player.shooting=true;
+					thisBullet = new Bullet(player.x,player.y,mouse.moveX,mouse.moveY);
+					bullets.push(thisBullet);
+					player.shooting=true;
+				}
+				if(evt.keyCode==66 && !blink.onCooldown)
+				{
+					player.currentSpell="blink";
+				}
+				if(evt.keyCode==84 && !bomb.onCooldown)
+				{
+					player.currentSpell="bomb";
+				}
 			}
-			if(evt.keyCode==66 && !blink.onCooldown)
-			{
-				player.currentSpell="blink";
-			}
-			if(evt.keyCode==84 && !bomb.onCooldown)
-			{
-				player.currentSpell="bomb";
-			}
-			if(evt.keyCode==13 && player.dead || inMenu)
+			if((evt.keyCode==13 && player.dead) || (evt.keyCode==13 && inMenu))
 			{
 				reset();
 				inMenu=false;
@@ -1550,6 +1564,7 @@
 		-->
 		<div class="wrapper">
 		<button type="button" onclick="displayControls()">Controls</button>
+		<button type="button" onclick="printHighScores()">High Scores</button>
 		</div>
 		<!--
 		<div id="spawnTimer">Spawn Timer = </div>
