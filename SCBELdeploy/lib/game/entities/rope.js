@@ -14,7 +14,7 @@ ig.module('game.entities.rope')
         size:{x:100,y:100},
     	swingRadius: 20,
 		theta: 5*Math.PI/4,
-		interval: .1,
+		interval: .035,
     	direction:1,
 		length:0,
     	swingTimer:null,
@@ -48,7 +48,7 @@ ig.module('game.entities.rope')
     	update: function(){
             if(this.swingActivated)
             {
-        		if(this.swingTimer.delta()>=.1)
+        		if(this.swingTimer.delta()>=.0000000001)
         		{
         			this.swingTimer.reset();
         			this.theta+=this.interval*this.direction;
