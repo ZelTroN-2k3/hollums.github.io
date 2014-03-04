@@ -1,8 +1,0 @@
-CONTROLS:
-	A,S,D,W - Left, Back, Right, Forward
-	Space - Shoot in direction of mouse position
-	N + Space or Shift + Space- Activate Nova spell
-	T + Click - Activate Timed Bomb at clicked area
-	B + Click - Activate Teleport to clicked area
-	
-The squares at the bottom of the screen will be lit green when the ability is ready to use again.  While on cool-down, the squares will be red and a countdown will initiate until they are ready again.  Player's active spell is colored in blue prior to use.
