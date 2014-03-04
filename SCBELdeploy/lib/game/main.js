@@ -223,11 +223,11 @@ OpeningScreen = ig.Game.extend(
 			ig.system.setGame(MyGame1);
 		}
 		if(this.talkTimer.delta()>this.readTime*1)
-			this.background = new ig.Image('media/dialogues/opening_screen2');
+			this.background = new ig.Image('media/dialogues/opening_screen2.png');
 		if(this.talkTimer.delta()*1 >= this.readTime*1 && this.talkTimer.delta()>this.readTime*2)
-			this.background = new ig.Image('media/dialogues/opening_screen3');
+			this.background = new ig.Image('media/dialogues/opening_screen3.png');
 		if(this.talkTimer.delta()*2 >= this.readTime*2 && this.talkTimer.delta()>this.readTime*3)
-			this.background = new ig.Image('media/dialogues/opening_screen4');
+			this.background = new ig.Image('media/dialogues/opening_screen4.png');
 		this.parent();
 	},
 
@@ -258,19 +258,19 @@ Dialogue1 = ig.Game.extend(
 			ig.system.setGame(MyGame2);
 		}
 		if(this.talkTimer.delta()>this.readTime*1)
-			this.background = new ig.Image('media/dialogues/dialogue1_screen2');
+			this.background = new ig.Image('media/dialogues/dialogue1_screen2.png');
 		if(this.talkTimer.delta()>this.readTime*2)
-			this.background = new ig.Image('media/dialogues/dialogue1_screen3');
+			this.background = new ig.Image('media/dialogues/dialogue1_screen3.png');
 		if(this.talkTimer.delta()>this.readTime*3)
-			this.background = new ig.Image('media/dialogues/dialogue1_screen4');
+			this.background = new ig.Image('media/dialogues/dialogue1_screen4.png');
 		if(this.talkTimer.delta()>this.readTime*4)
-			this.background = new ig.Image('media/dialogues/dialogue1_screen5');
+			this.background = new ig.Image('media/dialogues/dialogue1_screen5.png');
 		if(this.talkTimer.delta()>this.readTime*5)
-			this.background = new ig.Image('media/dialogues/dialogue1_screen6');
+			this.background = new ig.Image('media/dialogues/dialogue1_screen6.png');
 		if(this.talkTimer.delta()>this.readTime*6)
-			this.background = new ig.Image('media/dialogues/dialogue1_screen7');
+			this.background = new ig.Image('media/dialogues/dialogue1_screen7.png');
 		if(this.talkTimer.delta()>this.readTime*7)
-			this.background = new ig.Image('media/dialogues/dialogue1_screen8');
+			this.background = new ig.Image('media/dialogues/dialogue1_screen8.png');
 		this.parent();
 	},
 
@@ -301,13 +301,13 @@ Dialogue2 = ig.Game.extend(
 			ig.system.setGame(MyGame3);
 		}
 		if(this.talkTimer.delta()>this.readTime*1)
-			this.background = new ig.Image('media/dialogues/dialogue2_screen2');
+			this.background = new ig.Image('media/dialogues/dialogue2_screen2.png');
 		if(this.talkTimer.delta()>this.readTime*2)
-			this.background = new ig.Image('media/dialogues/dialogue2_screen3');
+			this.background = new ig.Image('media/dialogues/dialogue2_screen3.png');
 		if(this.talkTimer.delta()>this.readTime*3)
-			this.background = new ig.Image('media/dialogues/dialogue2_screen4');
+			this.background = new ig.Image('media/dialogues/dialogue2_screen4.png');
 		if(this.talkTimer.delta()>this.readTime*4)
-			this.background = new ig.Image('media/dialogues/dialogue2_screen5');
+			this.background = new ig.Image('media/dialogues/dialogue2_screen5.png');
 		this.parent();
 	},
 
@@ -339,15 +339,15 @@ Dialogue3 = ig.Game.extend(
 			ig.music.next();
 		}
 		if(this.talkTimer.delta()>this.readTime*1)
-			this.background = new ig.Image('media/dialogues/dialogue3_screen2');
+			this.background = new ig.Image('media/dialogues/dialogue3_screen2.png');
 		if(this.talkTimer.delta()>this.readTime*2)
-			this.background = new ig.Image('media/dialogues/dialogue3_screen3');
+			this.background = new ig.Image('media/dialogues/dialogue3_screen3.png');
 		if(this.talkTimer.delta()>this.readTime*3)
-			this.background = new ig.Image('media/dialogues/dialogue3_screen4');
+			this.background = new ig.Image('media/dialogues/dialogue3_screen4.png');
 		if(this.talkTimer.delta()>this.readTime*4)
-			this.background = new ig.Image('media/dialogues/dialogue3_screen5');
+			this.background = new ig.Image('media/dialogues/dialogue3_screen5.png');
 		if(this.talkTimer.delta()>this.readTime*5)
-			this.background = new ig.Image('media/dialogues/dialogue3_screen6');
+			this.background = new ig.Image('media/dialogues/dialogue3_screen6.png');
 		this.parent();
 	},
 
