@@ -227,18 +227,24 @@ ig.module(
 			if(this.standing && ig.input.pressed('kick') && !this.kicking)
 			{	
 				this.vel.x = 0;
-				if(this.attacker!=null && this.touches(this.attacker))
+				try
 				{
-					this.attacker.attacking=false;
-					this.attacker.setVelY(-this.kickForce);
-					this.attacker.setVelX(this.kickForce*this.direction);
-					this.attacker=null;
-				}
-				this.kickTime = new ig.Timer();
-				this.currentAnim = this.anims.kick;
-				this.kicking=true;
+					if(this.attacker!=null && this.touches(this.attacker))
+					{
+						this.attacker.attacking=false;
+						this.attacker.setVelY(-this.kickForce);
+						this.attacker.setVelX(this.kickForce*this.direction);
+						this.attacker=null;
+					}
+					this.kickTime = new ig.Timer();
+					this.currentAnim = this.anims.kick;
+					this.kicking=true;
 
-				this.anims.kick.rewind();
+					this.anims.kick.rewind();
+				}catch(err)
+				{
+					console.log('error: kick, null attacker');
+				}
 			}
 			
 			// jump

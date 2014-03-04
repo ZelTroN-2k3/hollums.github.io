@@ -207,7 +207,8 @@ StartScreen = ig.Game.extend(
 
 OpeningScreen = ig.Game.extend(
 {
-	background: new ig.Image('media/dialogues/opening_screen1.png'),
+	// background: new ig.Image('media/dialogues/opening_screen1.png'),
+	background: new ig.Image('media/dialogues/opening_screen4.png'),
 	talkTimer: null,
 	readTime: 3,
 	init: function()
@@ -222,12 +223,14 @@ OpeningScreen = ig.Game.extend(
 		{
 			ig.system.setGame(MyGame1);
 		}
+		/*
 		if(this.talkTimer.delta()>this.readTime*1)
 			this.background = new ig.Image('media/dialogues/opening_screen2.png');
 		if(this.talkTimer.delta()*1 >= this.readTime*1 && this.talkTimer.delta()>this.readTime*2)
 			this.background = new ig.Image('media/dialogues/opening_screen3.png');
 		if(this.talkTimer.delta()*2 >= this.readTime*2 && this.talkTimer.delta()>this.readTime*3)
 			this.background = new ig.Image('media/dialogues/opening_screen4.png');
+			*/
 		this.parent();
 	},
 
@@ -242,7 +245,8 @@ OpeningScreen = ig.Game.extend(
 
 Dialogue1 = ig.Game.extend(
 {
-	background: new ig.Image('media/dialogues/dialogue1_screen1.png'),
+	//background: new ig.Image('media/dialogues/dialogue1_screen1.png'),
+	background: new ig.Image('media/dialogues/dialogue1_screen8.png'),
 	talkTimer: null,
 	readTime: 2.5,
 	init: function()
@@ -256,7 +260,7 @@ Dialogue1 = ig.Game.extend(
 		if(ig.input.pressed('start'))
 		{
 			ig.system.setGame(MyGame2);
-		}
+		}/*
 		if(this.talkTimer.delta()>this.readTime*1)
 			this.background = new ig.Image('media/dialogues/dialogue1_screen2.png');
 		if(this.talkTimer.delta()>this.readTime*2)
@@ -271,6 +275,7 @@ Dialogue1 = ig.Game.extend(
 			this.background = new ig.Image('media/dialogues/dialogue1_screen7.png');
 		if(this.talkTimer.delta()>this.readTime*7)
 			this.background = new ig.Image('media/dialogues/dialogue1_screen8.png');
+			*/
 		this.parent();
 	},
 
@@ -285,7 +290,8 @@ Dialogue1 = ig.Game.extend(
 
 Dialogue2 = ig.Game.extend(
 {
-	background: new ig.Image('media/dialogues/dialogue2_screen1.png'),
+	//background: new ig.Image('media/dialogues/dialogue2_screen1.png'),
+	background: new ig.Image('media/dialogues/dialogue2_screen5.png'),
 	talkTimer: null,
 	readTime: 2.5,
 	init: function()
@@ -300,6 +306,7 @@ Dialogue2 = ig.Game.extend(
 		{
 			ig.system.setGame(MyGame3);
 		}
+		/*
 		if(this.talkTimer.delta()>this.readTime*1)
 			this.background = new ig.Image('media/dialogues/dialogue2_screen2.png');
 		if(this.talkTimer.delta()>this.readTime*2)
@@ -308,6 +315,7 @@ Dialogue2 = ig.Game.extend(
 			this.background = new ig.Image('media/dialogues/dialogue2_screen4.png');
 		if(this.talkTimer.delta()>this.readTime*4)
 			this.background = new ig.Image('media/dialogues/dialogue2_screen5.png');
+			*/
 		this.parent();
 	},
 
@@ -322,7 +330,8 @@ Dialogue2 = ig.Game.extend(
 
 Dialogue3 = ig.Game.extend(
 {
-	background: new ig.Image('media/dialogues/dialogue3_screen1.png'),
+	//background: new ig.Image('media/dialogues/dialogue3_screen1.png'),
+	background: new ig.Image('media/dialogues/dialogue3_screen6.png'),
 	talkTimer: null,
 	readTime: 2.5,
 	init: function()
@@ -338,6 +347,7 @@ Dialogue3 = ig.Game.extend(
 			ig.system.setGame(StartScreen);
 			ig.music.next();
 		}
+		/*
 		if(this.talkTimer.delta()>this.readTime*1)
 			this.background = new ig.Image('media/dialogues/dialogue3_screen2.png');
 		if(this.talkTimer.delta()>this.readTime*2)
@@ -348,6 +358,7 @@ Dialogue3 = ig.Game.extend(
 			this.background = new ig.Image('media/dialogues/dialogue3_screen5.png');
 		if(this.talkTimer.delta()>this.readTime*5)
 			this.background = new ig.Image('media/dialogues/dialogue3_screen6.png');
+			*/
 		this.parent();
 	},
 
