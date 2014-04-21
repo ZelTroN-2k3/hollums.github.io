@@ -10,7 +10,7 @@
 
 		<!-- BANNER -->
 		<header class="masthead">
-			<div class="container">
+			<div class="container" style="height:20%;">
 				<div class="row">
 					<div class="col-md-12">
 						<div class="banner">
@@ -21,7 +21,6 @@
 		</header>
 			<!--<div class="jumbotron"></div>-->
 		</div>
-
 		<!-- NAV BAR -->
 		<div id="nav">
 		<nav class="navbar-wrapper navbar-default navbar-static" role="navigation">
@@ -74,13 +73,23 @@
 							</li>
 						</ul>
 
-						<form class="navbar-form navbar-right" role="search">
-							<div class="form-group">
-								<input type="text" class="form-control" placeholder="Username">
-								<input type="password" class="form-control" placeholder="Password">
-							</div>
-							<button type="submit" class="btn btn-danger">Submit</button>
-						</form>
+						<ul class="nav navbar-nav navbar-right" style="padding-right:10px;">
+							<div class="dropdown">
+								<a class="dropdown-toggle" href="#" data-toggle="dropdown">
+									<img src="images/generic_profile.jpg" height="30px" width="30px" style="margin-top:15px;margin-bottom:15px;">
+									Sign In
+									<strong class="caret"></strong>
+								</a>
+								<div class="dropdown-menu" style="padding:15px; padding-bottom:10px;color:black;font-size:14px;font-family:impact;">
+									<form action="#" method="post" accept-charset="UTF-8">
+										Sign in: <br>
+										<input id="username" style="margin-bottom:15px;" type="text" name="userid" size="30"/>
+										<input id="password" style="margin-bottom:15px;" type="password" name="userpass" size="30"/>
+										<input class="btn btn-danger" style="clear:left;width:100%;height:32px;font-size:13px;" type="submit" name="commit" value="login"/>
+									</form>
+								</div> <!-- dropdown-menu -->
+							</div> <!-- dropdown div -->
+						<ul><!-- nav pull-right -->
 				</div> <!-- End the navbar collapse div -->
 			</div> <!-- End the container div -->
 		</nav>
