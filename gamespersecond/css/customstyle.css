@@ -1,13 +1,31 @@
 @import url("bootstrap.min.css");
 @import url("bootstrap-theme.css");
 
-.jumbotron
+header
 {
-	margin-top:55px;
-	height: 165px;
+	
+}
+
+#nav.affix
+{
+	position: fixed;
+	top:0;
+	width:100%;
+	z-index:10;
+}
+
+#nav
+{
+	padding-bottom:50px;
+}
+
+.banner
+{
 	background-image:url("../images/banner_5.png");
-	background-size:100%;
 	background-repeat:no-repeat;
+	display:block;
+	height:150px;
+	background-size:100%;
 	background-color:#303030;
 }
 
