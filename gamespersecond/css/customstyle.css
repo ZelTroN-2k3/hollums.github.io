@@ -126,3 +126,33 @@ th
 	padding-right:10px;
 	padding-left:10px;
 }
+
+gameplay
+{
+	font-size:30px;
+	padding-top:10px;
+	padding-bottom:10px;
+	margin-top:25px;
+	margin-bottom:25px;
+}
+
+.review_row
+{
+	border-top: 1px white;
+	border-bottom: 1px white;
+}
+.review_col 
+{
+	padding: 30px;
+}
+
+.review_col_special
+{
+	border-left: 1px white;
+	padding-left: 150px;
+}
+
+.review_body_special
+{
+	padding-left: 200px;
+}

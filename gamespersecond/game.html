@@ -96,9 +96,7 @@
 
 		<div class="container">
 	    	<div class="row">
-	    		<!-- Game of the Week -->
 	            <div class="col-md-6">
-	            	<div class="gow"></div>
 	            	<a href="#">
 	            		<img class="img-responsive img-square" src="images/super_smash_bros.jpg"></a>
 	              		<h3 class="text-center game_title">
@@ -106,7 +104,6 @@
 	              			<img src="images/logos_wii.png" height="50px" width="50px" style="padding-left:5x;">
 	              		</h3>
 	            </div>
-	 			<!-- Game of the Week Information -->
 	            <div class="col-md-6">
 	            		<table class="game_info table-responsive">
 	            			<tr>
@@ -132,13 +129,23 @@
 			              		</td>
 			              	</tr>
 			              	<tr>
-			              		<td><a href="#" class="btn btn-danger">Visit Site</a></td>
-			              		<td><a href="game.html" class="btn btn-default">View Game</a></td>
+			              		<td><a href="#" class="btn btn-danger">Visit Site</a>
 			    	       	</tr>
 		    	      </table>
 	            </div> <!-- cols-md-6 -->
 	        </div> <!-- row container -->
 	    </div> <!-- container -->
+
+	    <!-- Import video of gameplay -->
+	    <div class="container">
+	    	<div class="row">
+	    		<div class="col-md-12">
+	    			<gameplay>Game Play:</gameplay><br>
+	    			<iframe width="600" height="338" src="http://www.youtube.com/embed/EodNAK7pANw" frameborder="0" allowfullscreen></iframe>
+	    		</div> <!-- col -->
+	    	</div> <!-- row -->
+	    </div> <!-- container -->
+
 
 	    <!-- Best review for game -->
 	    <div class="container">
@@ -177,6 +184,46 @@
 	    	</div> <!-- row container -->
 	    </div> <!-- best review container -->
 
+	    <!-- List of reviews for game -->
+	    <div id="reviewHead"> <!-- This box holds the reviewer info and link to thier games -->
+				<table>
+					<tr class="review_row">
+						<td class="review_col">
+							<img src="images/mario.png" height="50px" width="50px" />
+						</td>
+						<td class="review_col">
+							<p> zeldaDude19 <br/> 
+								lvl: <img src="images/rupee_blue.png" height="20px" width="20px" >
+								<img src="images/rupee_blue.png" height="20px" width="20px" >
+								<img src="images/rupee_blue.png" height="20px" width="20px" >
+ 							</p>
+						</td>
+						<td class="review_col_special">
+							<a href="#" > <img src="images/treasure.png" height= "50px" width="50px" /> </a>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div id="box2"> <!-- This box holds the review and game title-->
+				<table>
+					<tr>
+						<td>
+							<p>Game Title</p>
+						</td>
+						<td class="review_body_special">
+							<img src="images/star.png" height="25px" width="25px">
+            				<img src="images/star.png" height="25px" width="25px">
+            				<img src="images/star.png" height="25px" width="25px">
+            				<img src="images/star.png" height="25px" width="25px">
+						</td>
+					</tr>
+				</table>
+			<!-- Review goes here -->
+			<p>
+				"Nintendo's epic 3D fighter series arrives on Wii as the best iteration yet. It's true -- there are a few minor quibbles to be made about the sometimes-repetitive single-player mode, unexplored third party character additions, lacking online communication options, or the largely familiar content inherent to sequels. But the moment you gather together with friends for a multiplayer match only to find, several minutes later, that you still haven't blinked, you'll have taken your first step into the digital drug that is Super Smash Bros. Brawl, and there's really no better way to describe it. The title's robust and balanced multiplayer offerings are completely engrossing and wholly entertaining from beginning to end, and this time around you can take those bouts to the online arena for similarly satisfying results."
+			</p>		
+		</div>
+
 	    <footer>
 	    	<div class="container">
 	    		<div class="row">
@@ -197,7 +244,6 @@
 	    		</div>
 	    	</div>
 	    </footer>
-
 
 
 		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
