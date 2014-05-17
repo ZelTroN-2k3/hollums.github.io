@@ -59,6 +59,11 @@ bottom{
 	padding-bottom:15px;
 }
 
+gametitle
+{
+	color:red;
+}
+
 .greeting
 {
 	text-align:center;
