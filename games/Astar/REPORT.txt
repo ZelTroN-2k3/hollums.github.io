@@ -1,0 +1,42 @@
+REPORT.txt
+
+Playing the game:
+
+	You may select different loaded maps from the file directory from
+	the added feature UI on the left side.  Note that when switching a
+	map, you must first adjust the speed slider on the side before 
+	playing in the new map. (This is due to a frame focus issue).
+
+	Press E for a Euclidean Heuristic search
+	Press D for a Djikstra Heuristic search
+	Press M for a Manhattan Heuristic search
+	Press SPACE to pause the search, SPACE to unpause.
+
+	To move, use the left, right, up, or down arrows. Or pressing 
+	arrows simultaneously for diagonal movement.
+
+	Adjust the algorithm's animation speed by sliding the speed slider
+	up to increase the time, and down to reduce the time between ticks.
+	In addition to the adjustable algorithm speed time, you also have the
+	option to pause by the algorithm mid session, so that you can examine 
+	closely the steps in process.
+
+How it's done:
+	This is programmed in Java using the Javax swing library.  The program
+	features multithreads as the board can print the tile's updates while
+	still allowing the player to move, or run other threads, as well as 
+	pause and unpausing the game, picking back up where the thread left off.
+
+	The program includes the Manhattan Heuristic, as well as Djikstra's
+	Heursitic, and Euclidean Heuristic for calculating paths using A*.
+
+	From the results, it is clear that the Manhatten Heuristic provides the
+	most efficient algorithm.  However, there are some rare case scenarios 
+	that either Djikstra's heuristic or even the Euclidean heuristic can 
+	match or even best the Manhatten heuristic.  Though these are special
+	scenarios and in general the Manhatten blows the other heuristics out of
+	the water.
+
+	I've included some screenshots in the screenshots folder.
+
+	

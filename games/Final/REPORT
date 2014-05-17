@@ -1,0 +1,43 @@
+REPORT
+
+I implemented a Unity 3D with an expansive environment that includes a periodic
+system of night and day. 
+
+The player is immersed in the world with a few tasks:
+
+Immediately, the player is prompted that he should build a shelter where he spawns.
+
+The game hints also that there is a tool to be found in the world to gather with.
+
+The world is riddled with enemies and the player must be cautious when he has no
+weapons to defend himself with.
+
+Once the player finds the Axe, he can gather wood from special trees, and kill
+enemies to gather parts / hardware.
+
+After gathering enough supplies and hardware, the player will likely be approaching
+night time, so he will head back to the enclave he started and use the supplies to
+build the house.
+
+Once the house is built, the player can collect the matches inside and restock on
+health with a "power cell," then head back outside to light the fire.
+
+After lighting the fire, the player acquires a torch.  The torch supplies light and
+comfort exploring at night, so the new task is to explore for a cave and find water.
+
+Once the player locates the cave, he will be immersed in a series of winding tunnels
+in the maze that the cave offers.  Inside, there are enemies lurking.
+
+The conclusion of the game arrives when the player finds the exit to the cave.
+
+From the exit, the player is dropped into the familiar world of the unity tutorial
+map, as required in the project description.
+
+HOW IT WORKS/DISCUSSION ON THE RESULTS:
+
+The game involves a number of scripts for several prefabs created.  I found the
+model for the Axe online.  Overall, the game turned out well.  I wish I had more time
+to create enemy models that would be more interesting.  But the unity model 
+for enemies was good enough for the game play purposes.  Also, I wish that I had
+time to implement more exciting combat features for enemies and the player, including
+more weapons and abilities.

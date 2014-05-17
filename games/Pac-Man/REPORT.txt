@@ -1,0 +1,45 @@
+PAC-MAN-THE GLOVES ARE OFF!
+
+This game is a shooting type game with an asteroids gameplay style, though with a twist!
+The theme of the game is to the arcade classic "Pac-Man," except our hero has grown tired
+of running from these pesky ghosts. The time is nigh for action, and Pac-Man is packing.
+Fend off the oncoming waves of ghosts with the pellets Pac-Man has coveted up until now.
+When you're in a bind, use special abilities to wipe out multiple enemies, or to dodge
+the spooky ghosts.
+
+Like any classic arcade game, this is a game about getting a high score.  In each round,
+Pac-Man's level scales with the score.  With each new level, Pac-Man's abilities grow
+stronger and become more readily available to use.  Unfortunately, the difficulty of the
+round also increases with the score, so it's no easy task to reach the highest level. 
+
+Dive in and see how many ghosts you can fend off!
+
+B - Blink or Teleport to a clicked destination
+T - Set a Timed Bomb in the clicked destination
+Space - Fire pellets
+Shift+Space - Cast Nova
+A - Move Left
+S - Move Back
+D - Move Right
+W - Move Up
+Mouse Hover - Aim
+
+SCORING AND GAMEPLAY
+Each time you defeat a ghost, the score will be incremented by one.  This also has an
+effect on how fast the other ghosts will appear on the screen, as well as the player's
+current level.  Reach the highest score possible to unlock all the player's perks.
+
+Steer clear from the ghosts, as soon as one gets too close, it's game over!  Use 
+offensive abilities to fend them off.  When a pellet or area of effect spell collides
+with a ghost, the ghost will dissipate into oblivion!
+
+GRAPHICAL OBJECTS:
+The player is animated by a Pac-Man figure, (in a future version, the Pac-Man player
+would rotate in the direction in which the user is aiming). The enemies are the classic
+Pac-Man ghosts coming in a variety of colors.  These images are drawn to the specific 
+x and y coordinates of their respective objects.  The rest of the game board is drawn
+though JavaScript, including any and all abilities and items.  The animations are drawn
+by iterations: for example the "Nova" ability calls a function to draw a circle with
+an initial radius, which increases in each iteration until some maximum radius value 
+is achieved.  Several other of the abilities function in a similar iterative manner
+in regards to animation.  

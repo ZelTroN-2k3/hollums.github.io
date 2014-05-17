@@ -1,0 +1,31 @@
+GRADING.txt
+
+Game Basics Total:
+	Begin/Default Map Displayed									Yes
+	Final F(x), H(x), & G(x)									Yes
+	Final Path Drawn											Yes
+	Final Length/#Steps Displayed								Yes
+	Animates (smooth)											Yes
+	Animation Speed Configurability								Yes
+	Support Environment Size of at least 140 Squares			Yes
+	Support Different (File Configured Environments)			Yes	
+	Goal (X,Y) Configurability									Yes (from File)
+	Start (X,Y) Configurability									Yes (from File)
+	Softcopy													???
+	Report w/ screenshots										Yes
+	GRADING 													Yes
+	3 Example Maps												Yes
+	README														Yes
+	Demo														Yes
+
+Embellishments:
+	Python														No
+	ImpactJS													No
+	Unity														No
+	Compare D*													Yes
+	Compare w/ Best First										Yes
+	Compare Heuristics (in addition to Manhattan distance)		Yes (3)
+	Larger Environment(100x100 and above)						No (Java Heap Space...)	
+	Different Shapes Tiles(Octagons)							No
+	Game that uses A*											Yes		
+	BONUS: Submitted on Thursday								Yes
