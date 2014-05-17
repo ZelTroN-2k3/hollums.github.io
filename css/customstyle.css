@@ -68,3 +68,9 @@ gametitle
 {
 	text-align:center;
 }
+
+welcome
+{
+	color:red;
+	font-size:15pt;
+}
