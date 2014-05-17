@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Astar Pathfinder</title>
+	<style type="text/css">
+		html,body {
+			background-color: #000;
+			color: #fff;
+			font-family: helvetica, arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			font-size: 12pt;
+		}
+
+		h1{
+			text-align:center;
+		}
+
+		td{
+			padding-left:2px;
+			padding-right:2px;
+			padding-top:2px;
+			padding-bottom:2px;
+		}
+
+		bottom{
+			position:relative;
+			bottom:5%;
+			left:50%;
+			right:50%;
+			text-align:center;
+		}
+		button
+		{
+			background-color:red;
+			padding:5px;
+			border-radius:10px;
+			border-color:red;
+			color:white;
+			font-family:helvetica;
+			font-size:12pt;
+		}
+
+		system
+		{
+			color:red;
+		}
+
+		cmd
+		{
+			font-family:courier;
+			color:blue;
+		}
+
+	</style>
+
+	<script>
+		function clickNote()
+		{
+			alert("There are a few bugs - I submitted this assignment early for extra credit so a few things that weren't detrimental to my grade weren't resolved.  If time permits, I will revisit this program and fix these up. Right now, when changing the map, the program opens a new JFrame window displaying the new map (the old one is still beneath it and running).  Eventually I would like to change this to having a single JFrame dynamically generate the maps; but for now, this will do. The only bug that particularly effects the user is when switching maps you must first make a speed adjustment on the new map to give focus to the new frame that is created, then resume the application as usual.");
+		}
+	</script>
+</head>
+<body>
+	<h1>Instructions for downloading:</h1>
+	<ul>
+		<li>Extract the folder and drag to your desktop.</li>
+		<li><system>For Macintosh:</system>
+			<ol>
+				<li>Open up the terminal (Shift+Cmd+A - Utilities - Terminal)</li>
+				<li>Assuming your user name is "Alex" for example:<br>
+					Type: <cmd>cd /Users/Alex/Desktop/Astar</cmd></li>
+				<li>Next, type: <cmd>make compile</cmd> (you may need to download cmd line tools to do this action.
+				</li>
+				<li>Next, type: <cmd>make run</cmd></li>
+			</ol>
+			<system>For Windows:</system>
+			<ol>
+				<li>Open up the command prompt:<br>
+					Press Start, then type <cmd>cmd</cmd> in the search bar.
+				</li>
+				<li>Assuming your user name is "Alex" for example:<br>
+					Type: <cmd>cd C:\Users\Alex\Desktop\Astar</cmd></li>
+				<li>Next, type: <cmd>make compile</cmd>
+				</li>
+				<li>Next, type: <cmd>make run</cmd></li>
+			</ol>
+		</li>
+	</ul>
+
+	<table border="1" id="controls" align="center">
+		<tr>
+			<td colspan="2" style="text-align:center;">Game Controls:</td>
+		</tr>
+		<tr>
+			<td>Run A* With Manhatten Heuristic</td>
+			<td>M</td>
+		</tr>
+		<tr>
+			<td>Run A* With Djikstra's Heuristic</td>
+			<td>D</td>
+		</tr>
+		<tr>
+			<td>Run A* With Euclidean's Heuristic</td>
+			<td>E</td>
+		</tr>
+		<tr>
+			<td>Adjust Speed of Algorithm Runtime</td>
+			<td>Drag slider on left</td>
+		</tr>
+		<tr>
+			<td>Change Board</td>
+			<td>Select from drop down menu on left <button onclick="clickNote()">**</button></td>
+		</tr>
+	</table>
+
+	<br>
+	<div style="text-align:center;">
+		<form method="get" action=".">
+			<button style="margin:0 auto;" type="submit">Download!</button>
+		</form>
+	</div>
+
+</body>
+</html>
