@@ -80,3 +80,13 @@ category
 	color:red;
 	font-size:15pt;
 }
+
+.backdrop
+{
+	/*
+	border:#303030 solid 2px;
+	box-shadow: 10px;
+	margin-left:15%;
+	margin-right:15%;
+	*/
+}
