@@ -1,13 +1,121 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <config>
   <settings>
-    <preloader image="images/hf400-0-0.png" />
+    <preloader image="images/hf400-0-(-60).png" />
     <userInterface showZoomButtons="true" showToolTips="true" showHotspotsButton="true" showFullScreenButton="true" showTogglePlayButton="true" showArrows="true" toolbarAlign="center" toolbarBackColor="transparent" toolbarHoverColor="#808285" toolbarForeColor="#A7A9AE" toolbarBackAlpha="0" toolbarAlpha="1" showProgressNumbers="true" showFullScreenToolbar="false" fullScreenBackColor="#FFFFFF" toolbarPosition="0" customCursorClass="default_cursor" viewerHint="" toolbarAutohide="false" />
     <control dragSpeed="0.13" doubleClickZooms="true" disableMouseControl="false" showHighresOnFullScreen="true" mouseHoverDrag="false" hideHotspotsOnLoad="false" hideHotspotsOnZoom="true" rowSensitivity="15" dragSensitivity="10" inBrowserFullScreen="false" doubleClickFullscreen="false" zoomSteps="1" zoomSpeed="300" singleClickZooms="false" pauseOnPreload="false" resumePreloadOnHover="false" mouseWheelDrag="false" mouseWheelDragZoomOnly="false" />
     <rotation firstImage="0" rotate="false" rotatePeriod="7" bounce="false" rotateDirection="-1" forceDirection="false" inertiaRelToDragSpeed="true" inertiaTimeToStop="700" inertiaMaxInterval="120" useInertia="true" flipHorizontalInput="false" flipVerticalInput="false" bounceRows="true" rowsOnSingleIndex="false" flipAxis="false" />
   </settings>
   <hotspots />
   <images rows="5" highresWidth="1024" highresHeight="768">
+    <image src="images/hf400-0-(-60).png">
+      <highres src="images/highres/hf400-0-(-60).png" />
+    </image>
+    <image src="images/hf400-20-(-60).png">
+      <highres src="images/highres/hf400-20-(-60).png" />
+    </image>
+    <image src="images/hf400-40-(-60).png">
+      <highres src="images/highres/hf400-40-(-60).png" />
+    </image>
+    <image src="images/hf400-60-(-60).png">
+      <highres src="images/highres/hf400-60-(-60).png" />
+    </image>
+    <image src="images/hf400-80-(-60).png">
+      <highres src="images/highres/hf400-80-(-60).png" />
+    </image>
+    <image src="images/hf400-100-(-60).png">
+      <highres src="images/highres/hf400-100-(-60).png" />
+    </image>
+    <image src="images/hf400-120-(-60).png">
+      <highres src="images/highres/hf400-120-(-60).png" />
+    </image>
+    <image src="images/hf400-140-(-60).png">
+      <highres src="images/highres/hf400-140-(-60).png" />
+    </image>
+    <image src="images/hf400-160-(-60).png">
+      <highres src="images/highres/hf400-160-(-60).png" />
+    </image>
+    <image src="images/hf400-180-(-60).png">
+      <highres src="images/highres/hf400-180-(-60).png" />
+    </image>
+    <image src="images/hf400-200-(-60).png">
+      <highres src="images/highres/hf400-200-(-60).png" />
+    </image>
+    <image src="images/hf400-220-(-60).png">
+      <highres src="images/highres/hf400-220-(-60).png" />
+    </image>
+    <image src="images/hf400-240-(-60).png">
+      <highres src="images/highres/hf400-240-(-60).png" />
+    </image>
+    <image src="images/hf400-260-(-60).png">
+      <highres src="images/highres/hf400-260-(-60).png" />
+    </image>
+    <image src="images/hf400-280-(-60).png">
+      <highres src="images/highres/hf400-280-(-60).png" />
+    </image>
+    <image src="images/hf400-300-(-60).png">
+      <highres src="images/highres/hf400-300-(-60).png" />
+    </image>
+    <image src="images/hf400-320-(-60).png">
+      <highres src="images/highres/hf400-320-(-60).png" />
+    </image>
+    <image src="images/hf400-340-(-60).png">
+      <highres src="images/highres/hf400-340-(-60).png" />
+    </image>
+    <image src="images/hf400-0-(-30).png">
+      <highres src="images/highres/hf400-0-(-30).png" />
+    </image>
+    <image src="images/hf400-20-(-30).png">
+      <highres src="images/highres/hf400-20-(-30).png" />
+    </image>
+    <image src="images/hf400-40-(-30).png">
+      <highres src="images/highres/hf400-40-(-30).png" />
+    </image>
+    <image src="images/hf400-60-(-30).png">
+      <highres src="images/highres/hf400-60-(-30).png" />
+    </image>
+    <image src="images/dummy.png">
+      <highres src="images/highres/dummy.png" />
+    </image>
+    <image src="images/dummy.png">
+      <highres src="images/highres/dummy.png" />
+    </image>
+    <image src="images/dummy.png">
+      <highres src="images/highres/dummy.png" />
+    </image>
+    <image src="images/dummy.png">
+      <highres src="images/highres/dummy.png" />
+    </image>
+    <image src="images/dummy.png">
+      <highres src="images/highres/dummy.png" />
+    </image>
+    <image src="images/dummy.png">
+      <highres src="images/highres/dummy.png" />
+    </image>
+    <image src="images/dummy.png">
+      <highres src="images/highres/dummy.png" />
+    </image>
+    <image src="images/dummy.png">
+      <highres src="images/highres/dummy.png" />
+    </image>
+    <image src="images/dummy.png">
+      <highres src="images/highres/dummy.png" />
+    </image>
+    <image src="images/dummy.png">
+      <highres src="images/highres/dummy.png" />
+    </image>
+    <image src="images/dummy.png">
+      <highres src="images/highres/dummy.png" />
+    </image>
+    <image src="images/dummy.png">
+      <highres src="images/highres/dummy.png" />
+    </image>
+    <image src="images/dummy.png">
+      <highres src="images/highres/dummy.png" />
+    </image>
+    <image src="images/dummy.png">
+      <highres src="images/highres/dummy.png" />
+    </image>
     <image src="images/hf400-0-0.png">
       <highres src="images/highres/hf400-0-0.png" />
     </image>
@@ -169,114 +277,6 @@
     </image>
     <image src="images/hf400-340-60.png">
       <highres src="images/highres/hf400-340-60.png" />
-    </image>
-    <image src="images/hf400-0-(-30).png">
-      <highres src="images/highres/hf400-0-(-30).png" />
-    </image>
-    <image src="images/hf400-20-(-30).png">
-      <highres src="images/highres/hf400-20-(-30).png" />
-    </image>
-    <image src="images/hf400-40-(-30).png">
-      <highres src="images/highres/hf400-40-(-30).png" />
-    </image>
-    <image src="images/hf400-60-(-30).png">
-      <highres src="images/highres/hf400-60-(-30).png" />
-    </image>
-    <image src="images/hf400-80-(-30).png">
-      <highres src="images/highres/hf400-80-(-30).png" />
-    </image>
-    <image src="images/hf400-100-(-30).png">
-      <highres src="images/highres/hf400-100-(-30).png" />
-    </image>
-    <image src="images/hf400-120-(-30).png">
-      <highres src="images/highres/hf400-120-(-30).png" />
-    </image>
-    <image src="images/hf400-140-(-30).png">
-      <highres src="images/highres/hf400-140-(-30).png" />
-    </image>
-    <image src="images/hf400-160-(-30).png">
-      <highres src="images/highres/hf400-160-(-30).png" />
-    </image>
-    <image src="images/hf400-180-(-30).png">
-      <highres src="images/highres/hf400-180-(-30).png" />
-    </image>
-    <image src="images/hf400-200-(-30).png">
-      <highres src="images/highres/hf400-200-(-30).png" />
-    </image>
-    <image src="images/hf400-220-(-30).png">
-      <highres src="images/highres/hf400-220-(-30).png" />
-    </image>
-    <image src="images/hf400-240-(-30).png">
-      <highres src="images/highres/hf400-240-(-30).png" />
-    </image>
-    <image src="images/hf400-260-(-30).png">
-      <highres src="images/highres/hf400-260-(-30).png" />
-    </image>
-    <image src="images/hf400-280-(-30).png">
-      <highres src="images/highres/hf400-280-(-30).png" />
-    </image>
-    <image src="images/hf400-300-(-30).png">
-      <highres src="images/highres/hf400-300-(-30).png" />
-    </image>
-    <image src="images/hf400-320-(-30).png">
-      <highres src="images/highres/hf400-320-(-30).png" />
-    </image>
-    <image src="images/hf400-340-(-30).png">
-      <highres src="images/highres/hf400-340-(-30).png" />
-    </image>
-    <image src="images/hf400-0-(-60).png">
-      <highres src="images/highres/hf400-0-(-60).png" />
-    </image>
-    <image src="images/hf400-20-(-60).png">
-      <highres src="images/highres/hf400-20-(-60).png" />
-    </image>
-    <image src="images/hf400-40-(-60).png">
-      <highres src="images/highres/hf400-40-(-60).png" />
-    </image>
-    <image src="images/hf400-60-(-60).png">
-      <highres src="images/highres/hf400-60-(-60).png" />
-    </image>
-    <image src="images/hf400-80-(-60).png">
-      <highres src="images/highres/hf400-80-(-60).png" />
-    </image>
-    <image src="images/hf400-100-(-60).png">
-      <highres src="images/highres/hf400-100-(-60).png" />
-    </image>
-    <image src="images/hf400-120-(-60).png">
-      <highres src="images/highres/hf400-120-(-60).png" />
-    </image>
-    <image src="images/hf400-140-(-60).png">
-      <highres src="images/highres/hf400-140-(-60).png" />
-    </image>
-    <image src="images/hf400-160-(-60).png">
-      <highres src="images/highres/hf400-160-(-60).png" />
-    </image>
-    <image src="images/hf400-180-(-60).png">
-      <highres src="images/highres/hf400-180-(-60).png" />
-    </image>
-    <image src="images/hf400-200-(-60).png">
-      <highres src="images/highres/hf400-200-(-60).png" />
-    </image>
-    <image src="images/hf400-220-(-60).png">
-      <highres src="images/highres/hf400-220-(-60).png" />
-    </image>
-    <image src="images/hf400-240-(-60).png">
-      <highres src="images/highres/hf400-240-(-60).png" />
-    </image>
-    <image src="images/hf400-260-(-60).png">
-      <highres src="images/highres/hf400-260-(-60).png" />
-    </image>
-    <image src="images/hf400-280-(-60).png">
-      <highres src="images/highres/hf400-280-(-60).png" />
-    </image>
-    <image src="images/hf400-300-(-60).png">
-      <highres src="images/highres/hf400-300-(-60).png" />
-    </image>
-    <image src="images/hf400-320-(-60).png">
-      <highres src="images/highres/hf400-320-(-60).png" />
-    </image>
-    <image src="images/hf400-340-(-60).png">
-      <highres src="images/highres/hf400-340-(-60).png" />
     </image>
   </images>
 </config>
